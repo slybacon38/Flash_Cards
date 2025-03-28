@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="cropped-CyRoot-Logo-121324-1.png" alt="Logo">
+    </div>
+
+    <div class="topic-selector" style="text-align: center; margin-bottom: 20px;">
+        <span>Select a Topic:</span><br> <button id="load-core-btn">Core Concepts</button>
+        <button id="load-net-fun-btn">Networking Fundamentals</button>
+        <button id="load-crypto-btn">Cryptography</button>
+        <button id="load-net-sec-btn">Network Security</button>
+    </div>
+
+    <div class="flashcard-container">
+        <div class="card-content">
+            <div id="question-number">No topic loaded</div>
+            <div id="question">Please select a topic to begin.</div>
+            <div id="answer"></div> </div>
+
+        <div class="controls">
+            <button id="toggle-answer-btn" disabled>Show Answer</button>
+            <button id="shuffle-btn" disabled>Shuffle Cards</button>
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn" disabled>Next</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

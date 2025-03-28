@@ -1,0 +1,402 @@
+[
+    {
+        "question": "What is cryptography?",
+        "answer": "Cryptography is the practice and study of techniques for secure communication in the presence of adversaries. It involves the use of mathematical algorithms and techniques to transform data into an unreadable format (ciphertext) and back again (plaintext), ensuring confidentiality, integrity, authentication, and non-repudiation."
+    },
+    {
+        "question": "What are the basic goals of cryptography?",
+        "answer": "The basic goals of cryptography are:\n\n    Confidentiality: Ensuring that information is accessible only to authorized parties.\n\n    Integrity: Ensuring that information is accurate and has not been altered.\n\n    Authentication: Verifying the identity of the sender of a message.\n\n    Non-repudiation: Preventing a sender from denying that they sent a message."
+    },
+    {
+        "question": "What is encryption?",
+        "answer": "Encryption is the process of converting plaintext (readable data) into ciphertext (unreadable data) to protect its confidentiality. It uses an algorithm (cipher) and a key to perform this transformation."
+    },
+    {
+        "question": "What is decryption?",
+        "answer": "Decryption is the reverse process of encryption, converting ciphertext back into its original plaintext form. It uses the same algorithm as encryption and a corresponding key."
+    },
+    {
+        "question": "What is a cipher?",
+        "answer": "A cipher is an algorithm used to perform encryption or decryption. It defines the set of steps for transforming plaintext into ciphertext, or vice versa."
+    },
+    {
+        "question": "What is a cryptographic key?",
+        "answer": "A cryptographic key is a string of characters (a sequence of bits) used in a cryptographic algorithm to encrypt or decrypt data. The security of the encryption depends heavily on the secrecy and strength of the key."
+    },
+    {
+        "question": "What is symmetric-key cryptography?",
+        "answer": "Symmetric-key cryptography is a type of encryption where the same key is used for both encryption and decryption. Both the sender and the receiver must possess the same secret key."
+    },
+    {
+        "question": "What are some common symmetric-key algorithms?...",
+        "answer": "Common symmetric-key algorithms include:\n\n    AES (Advanced Encryption Standard): A modern and widely used block cipher that is considered very secure.\n\n    DES (Data Encryption Standard): An older block cipher that is now considered insecure due to its small key size.\n\n    3DES (Triple DES): An improvement over DES that applies the DES cipher three times to each block of data. While more secure than DES, it is slower than AES."
+    },
+    {
+        "question": "What are the advantages and disadvantages of symmetric-key cryptography?",
+        "answer": "Advantages:\n    Fast encryption and decryption speeds, making it suitable for encrypting large amounts of data.\n    Relatively simple to implement.\n\nDisadvantages:\n    Key distribution: The sender and receiver must securely exchange the secret key before communication can begin. This can be a significant challenge.\n    Scalability: Managing keys becomes complex in large networks with many communicating parties."
+    },
+    {
+        "question": "What is asymmetric-key cryptography?",
+        "answer": "Asymmetric-key cryptography, also known as public-key cryptography, uses two mathematically related keys: a public key and a private key. The public key can be shared with anyone, while the private key must be kept secret by its owner."
+    },
+    {
+        "question": "What are some common asymmetric-key algorithms?...",
+        "answer": "Common asymmetric-key algorithms include:\n\n    RSA (Rivest–Shamir–Adleman): A widely used algorithm for encryption and digital signatures.\n\n    ECC (Elliptic Curve Cryptography): A modern public-key cryptography based on the mathematics of elliptic curves, offering strong security with smaller key sizes."
+    },
+    {
+        "question": "What are the advantages and disadvantages of asymmetric-key cryptography?",
+        "answer": "Advantages:\n    Solves the key distribution problem: Public keys can be freely distributed.\n    Enables digital signatures for authentication and non-repudiation.\n\nDisadvantages:\n    Slower encryption and decryption speeds compared to symmetric-key cryptography.\n    More complex to implement."
+    },
+    {
+        "question": "What is a public key?",
+        "answer": "A public key is one of the two keys in an asymmetric-key cryptosystem. It is designed to be freely distributed and used to encrypt data or verify digital signatures."
+    },
+    {
+        "question": "What is a private key?",
+        "answer": "A private key is the other key in an asymmetric-key cryptosystem. It is kept secret by its owner and is used to decrypt data encrypted with the corresponding public key or to create digital signatures."
+    },
+    {
+        "question": "How do public and private keys work?",
+        "answer": "Public and private keys work as a pair:\n    Data encrypted with a public key can only be decrypted with the corresponding private key.\n    A digital signature created with a private key can be verified using the corresponding public key."
+    },
+    {
+        "question": "What is a digital signature?",
+        "answer": "A digital signature is a cryptographic technique used to verify the authenticity and integrity of a message or document. It provides assurance that the message was sent by the claimed sender and has not been altered."
+    },
+    {
+        "question": "How does a digital signature work?",
+        "answer": "The process involves these steps:\n    Hashing: The sender uses a hash function to create a unique \"fingerprint\" (hash) of the message.\n    Signing: The sender encrypts the hash of the message with their private key, creating the digital signature.\n    Verification: The recipient uses the sender's public key to decrypt the digital signature and obtain the original hash.\n    Comparison: The recipient independently calculates the hash of the received message and compares it to the decrypted hash. If the two hashes match, the message's integrity and the sender's authenticity are verified."
+    },
+    {
+        "question": "What is a digital certificate?",
+        "answer": "A digital certificate is an electronic document that verifies the identity of an individual, system, or organization. It binds a public key to an identity and is issued by a trusted entity called a Certificate Authority (CA)."
+    },
+    {
+        "question": "What is a certificate authority (CA)?",
+        "answer": "A Certificate Authority (CA) is a trusted entity that issues digital certificates. CAs verify the identity of individuals, organizations, and websites before issuing certificates, establishing trust in online transactions and communications."
+    },
+    {
+        "question": "What is a root certificate?",
+        "answer": "A root certificate is a self-signed digital certificate that identifies a Certificate Authority (CA). It is the foundation of a chain of trust, as other certificates are issued and signed by CAs whose authenticity can be traced back to a root certificate."
+    },
+    {
+        "question": "What is a certificate chain?",
+        "answer": "A certificate chain (or chain of trust) is a list of digital certificates used to verify that a given digital certificate is valid. The chain starts with the certificate being verified (the end-entity certificate), proceeds through intermediate certificates, and ends with the root certificate."
+    },
+    {
+        "question": "How do you verify a digital certificate?",
+        "answer": "To verify a digital certificate, a client (e.g., a web browser) performs these steps:\n    The client receives the certificate and the certificate chain from the server.\n    The client checks if the certificate is valid (e.g., not expired, not revoked).\n    The client verifies each certificate in the chain by checking the signature of the issuing certificate.\n    The client continues verifying certificates up the chain until it reaches a trusted root certificate in its trust store.\n    If the root certificate is trusted and all signatures are valid, the certificate is considered verified."
+    },
+    {
+        "question": "What is a self-signed certificate?",
+        "answer": "A self-signed certificate is a digital certificate that has been signed by the same entity that it identifies (the owner of the certificate) rather than by a trusted Certificate Authority (CA)."
+    },
+    {
+        "question": "What are the risks of using self-signed certificates?",
+        "answer": "Self-signed certificates pose security risks because they lack the verification and trust provided by a CA.\n    Browsers typically display warnings when encountering self-signed certificates, as they cannot verify the website's identity.\n    They are vulnerable to man-in-the-middle attacks, as an attacker can easily create a fake self-signed certificate."
+    },
+    {
+        "question": "What is a key exchange?",
+        "answer": "Key exchange is the process of securely sharing cryptographic keys between two parties so that they can use the keys for encryption and decryption."
+    },
+    {
+        "question": "What are some common key exchange algorithms?...",
+        "answer": "A common key-exchange algorithm is Diffie-Hellman."
+    },
+    {
+        "question": "What is the Diffie-Hellman key exchange?",
+        "answer": "The Diffie-Hellman key exchange is a specific method of securely exchanging cryptographic keys over a public channel without having to transmit the keys directly. It establishes a shared secret between two parties that can then be used for symmetric-key encryption."
+    },
+    {
+        "question": "What is elliptic curve cryptography (ECC)?",
+        "answer": "Elliptic Curve Cryptography (ECC) is a type of public-key cryptography based on the algebraic structure of elliptic curves over finite fields."
+    },
+    {
+        "question": "How does ECC work?",
+        "answer": "ECC relies on the difficulty of solving the elliptic curve discrete logarithm problem. It uses points on an elliptic curve to generate public and private key pairs, enabling encryption and digital signatures."
+    },
+    {
+        "question": "What are the advantages of ECC?",
+        "answer": "ECC offers several advantages:\n    Smaller key sizes: ECC can provide the same level of security as RSA with significantly smaller keys, leading to faster computations and reduced storage requirements.\n    Efficiency: ECC operations are generally faster than RSA operations, especially for encryption and decryption.\n    Lower power consumption: ECC is suitable for devices with limited resources, such as mobile devices."
+    },
+    {
+        "question": "What is hashing?",
+        "answer": "Hashing is the process of transforming data of any arbitrary size into a fixed-size string of characters or bytes, called a hash value or hash. This is done using a hash function."
+    },
+    {
+        "question": "What is a hash function?",
+        "answer": "A hash function is a mathematical algorithm that takes an input of any size (called a message) and produces a fixed-size output (called a hash value or message digest)."
+    },
+    {
+        "question": "What are the properties of a good hash function?",
+        "answer": "A good cryptographic hash function should have the following properties:\n    Preimage resistance: It should be computationally infeasible to find the original input (message) given only its hash value.\n    Second preimage resistance: It should be computationally infeasible to find a different input that produces the same hash value as a given input.\n    Collision resistance: It should be computationally infeasible to find any two different inputs that produce the same hash value.\n    Deterministic: The same input should always produce the same hash output.\n    Fast computation: It should be efficient to compute the hash value for any given input."
+    },
+    {
+        "question": "What are some common hashing algorithms?...",
+        "answer": "Common hashing algorithms include:\n    MD5 (Message Digest 5): An older algorithm that produces a 128-bit hash. It is now considered cryptographically broken and should not be used for security purposes.\n    SHA-1 (Secure Hash Algorithm 1): Produces a 160-bit hash. It is also considered weak and should be avoided for new applications.\n    SHA-256 (Secure Hash Algorithm 256-bit): Produces a 256-bit hash. It is a widely used and considered secure hash function.\n    SHA-512 (Secure Hash Algorithm 512-bit): Produces a 512-bit hash. It is also a widely used and secure hash function, offering a higher level of security than SHA-256."
+    },
+    {
+        "question": "What are the differences between MD5, SHA-1, SHA-256, and SHA-512?",
+        "answer": "The main differences lie in their:\n    Hash output size: MD5 (128 bits) < SHA-1 (160 bits) < SHA-256 (256 bits) < SHA-512 (512 bits)\n    Security: MD5 and SHA-1 are considered weak and vulnerable to collision attacks. SHA-256 and SHA-512 are currently considered secure.\n    Performance: Hashing speed varies depending on the algorithm and implementation."
+    },
+    {
+        "question": "What is a collision in hashing?",
+        "answer": "A collision in hashing occurs when two different inputs (messages) produce the same hash value."
+    },
+    {
+        "question": "What is collision resistance?",
+        "answer": "Collision resistance is the property of a hash function that makes it computationally infeasible to find two different inputs that produce the same hash value."
+    },
+    {
+        "question": "What is the birthday paradox?",
+        "answer": "The birthday paradox is the counterintuitive observation that in a set of randomly chosen people, the probability that some pair of people will have the same birthday rises surprisingly quickly as the set size increases."
+    },
+    {
+        "question": "How does the birthday paradox affect hashing?",
+        "answer": "The birthday paradox shows that the probability of finding a collision in a hash function is higher than one might expect. It reduces the effective security of a hash function against collision attacks. For an n-bit hash function, a collision can be found with a probability of 50% after hashing only approximately 2^(n/2) inputs, rather than 2^n inputs."
+    },
+    {
+        "question": "What is salting?",
+        "answer": "Salting is a technique used to protect passwords stored in a database. It involves adding a unique, random string (the \"salt\") to each password before it is hashed."
+    },
+    {
+        "question": "Why is salting important for password security?",
+        "answer": "Salting is important because:\n    It makes dictionary attacks less effective: Even if attackers have a precomputed table of common password hashes, the salts make these hashes useless.\n    It makes rainbow table attacks impossible: Rainbow tables cannot be precomputed for salted hashes because the salt is different for each password."
+    },
+    {
+        "question": "What is key stretching?",
+        "answer": "Key stretching is a technique used to strengthen passwords by repeatedly hashing them multiple times. This increases the computational effort required to crack the password."
+    },
+    {
+        "question": "Why is key stretching important for password security?",
+        "answer": "Key stretching makes brute-force attacks more time-consuming and computationally expensive, significantly increasing the difficulty for attackers to crack passwords."
+    },
+    {
+        "question": "What are some common key stretching algorithms?...",
+        "answer": "Common key stretching algorithms include:\nPBKDF2 (Password-Based Key Derivation Function 2): A widely used key-derivation function that applies a pseudorandom function, like HMAC, to the password along with a salt many times to produce a derived key.\nbcrypt: A key derivation function that uses a Blowfish-based hash and includes a built-in salting mechanism and adaptive iteration count.\nscrypt: A key derivation function that is designed to be computationally and memory-intensive, making it even harder to crack passwords."
+    },
+    {
+        "question": "What is a password manager?",
+        "answer": "A password manager is a software application that stores and manages a user's passwords, typically in an encrypted format, allowing users to use strong, unique passwords for different accounts without having to remember them all."
+    },
+    {
+        "question": "What are the benefits of using a password manager?",
+        "answer": "Benefits include:\nStronger passwords: Encourages users to use complex, unique passwords.\nReduced risk of phishing: Auto-filling logins reduces the risk of entering credentials on phishing sites.\nConvenience: Simplifies the login process.\nSecurity: Protects passwords with strong encryption."
+    },
+    {
+        "question": "What is a cryptographic nonce?",
+        "answer": "In cryptography, a nonce is a number used only once. It is often a random or pseudo-random number issued in an authentication protocol to ensure that old communications cannot be reused in replay attacks."
+    },
+    {
+        "question": "What is a pseudo-random number generator (PRNG)?",
+        "answer": "A pseudo-random number generator (PRNG) is an algorithm that generates a sequence of numbers that approximate the properties of random numbers. While not truly random, they are often sufficient for many cryptographic applications."
+    },
+    {
+        "question": "What is a true random number generator (TRNG)?",
+        "answer": "A true random number generator (TRNG) is a device that generates random numbers from a physical process, rather than an algorithm. These processes can include atmospheric noise, thermal noise, or radioactive decay."
+    },
+    {
+        "question": "What is quantum cryptography?",
+        "answer": "Quantum cryptography is the use of quantum mechanical properties to encrypt and transmit data."
+    },
+    {
+        "question": "How does quantum cryptography work?",
+        "answer": "Quantum cryptography primarily uses quantum key distribution (QKD). QKD allows two parties to produce a shared random secret key known only to them, which can then be used to encrypt and decrypt messages. It relies on the principles of quantum mechanics, such as superposition and entanglement, to ensure secure key exchange."
+    },
+    {
+        "question": "What are the potential benefits of quantum cryptography?",
+        "answer": "The primary benefit of quantum cryptography is its theoretical ability to provide unconditionally secure communication. If implemented correctly, any attempt to intercept the key exchange will be detectable."
+    },
+    {
+        "question": "What is post-quantum cryptography?",
+        "answer": "Post-quantum cryptography (PQC) refers to cryptographic algorithms that are believed to be secure against attacks by both classical and quantum computers."
+    },
+    {
+        "question": "Why is post-quantum cryptography important?",
+        "answer": "Post-quantum cryptography is important because quantum computers, which are currently under development, have the potential to break many of the public-key cryptosystems that are widely used today, such as RSA and ECC. PQC aims to develop replacements for these algorithms before quantum computers become a practical threat."
+    },
+    {
+        "question": "What is homomorphic encryption?",
+        "answer": "Homomorphic encryption is a type of encryption that allows computations to be performed on ciphertext without decrypting it first. The results of these computations, when decrypted, match the results of the same computations performed on the plaintext."
+    },
+    {
+        "question": "How does homomorphic encryption work?",
+        "answer": "Homomorphic encryption works by using special encryption schemes that preserve the algebraic structure of the underlying data. This allows specific mathematical operations (like addition and multiplication) to be carried out on the ciphertext."
+    },
+    {
+        "question": "What are the potential applications of homomorphic encryption?",
+        "answer": "Potential applications include:\nSecure cloud computing: Performing computations on sensitive data in the cloud without the cloud provider being able to see the data.\nPrivacy-preserving data analysis: Allowing researchers to analyze encrypted data without compromising its confidentiality.\nSecure voting: Enabling secure and verifiable electronic voting systems.\nSecure machine learning: Training machine learning models on encrypted data."
+    },
+    {
+        "question": "What is zero-knowledge proof?",
+        "answer": "A zero-knowledge proof is a method by which one party (the prover) can prove to another party (the verifier) that a given statement is true, without conveying any additional information apart from the fact that the statement is indeed true."
+    },
+    {
+        "question": "How does zero-knowledge proof work?",
+        "answer": "Zero-knowledge proofs involve specific protocols with interactions between a prover and a verifier. These protocols are designed to satisfy three properties:\nCompleteness: If the statement is true, an honest verifier can be convinced of this fact by an honest prover.\nSoundness: If the statement is false, no prover can convince an honest verifier that it is true, except with a negligible probability.\nZero-knowledge: The interaction conveys no additional information other than the fact that the statement is true."
+    },
+    {
+        "question": "What are the potential applications of zero-knowledge proof?",
+        "answer": "Potential applications include:\nSecure authentication: Proving identity without revealing the actual credentials.\nPrivacy-preserving transactions: Verifying the validity of a transaction without revealing the details.\nSecure voting: Enabling secure and verifiable electronic voting systems.\nConditional payments."
+    },
+    {
+        "question": "What is a side-channel attack on cryptography?",
+        "answer": "A side-channel attack is an attack that exploits information leaked from the physical implementation of a cryptographic system, rather than attacking the algorithm itself."
+    },
+    {
+        "question": "What are some examples of side-channel attacks?...",
+        "answer": "Examples of side-channel attacks include:\nTiming attacks: Analyzing the time it takes for a system to perform cryptographic operations.\nPower analysis: Measuring the electrical power consumption of a device during cryptographic operations.\nElectromagnetic analysis: Measuring the electromagnetic radiation emitted by a device.\nAcoustic attacks: Analyzing sounds emitted by a device."
+    },
+    {
+        "question": "How can you protect against side-channel attacks?",
+        "answer": "Protection methods include:\nConstant-time algorithms: Designing algorithms that take the same amount of time to execute regardless of the input.\nHardware countermeasures: Shielding devices to reduce electromagnetic emissions or power fluctuations.\nMasking: Randomizing intermediate values during cryptographic computations."
+    },
+    {
+        "question": "What is a fault injection attack?",
+        "answer": "A fault injection attack is a type of hardware attack where an attacker introduces errors into a system to cause it to behave in unintended ways."
+    },
+    {
+        "question": "How does a fault injection attack work?",
+        "answer": "Fault injection can be achieved by manipulating environmental conditions like voltage, clock signals, temperature, or radiation to disrupt the normal operation of a device."
+    },
+    {
+        "question": "What are the potential consequences of a fault injection attack?",
+        "answer": "Consequences can include:\nBypassing security checks.\nRevealing secret information.\nCausing the system to enter a vulnerable state."
+    },
+    {
+        "question": "What is a replay attack in cryptography?",
+        "answer": "A replay attack in cryptography is a network attack where a valid data transmission is maliciously or fraudulently repeated or delayed."
+    },
+    {
+        "question": "How can you prevent replay attacks?",
+        "answer": "Methods to prevent replay attacks include:\nSequence numbers: Adding a unique, sequential number to each transmission.\nTimestamps: Including a timestamp in each transmission and rejecting messages that are too old.\nNonces: Using a \"number used once\" that is unique to each transaction."
+    },
+    {
+        "question": "What is a chosen-plaintext attack (CPA)?",
+        "answer": "In cryptography, a chosen-plaintext attack (CPA) is an attack model where the attacker can obtain the ciphertexts for arbitrarily chosen plaintexts. The goal is to gain information that reduces the security of the cryptographic scheme."
+    },
+    {
+        "question": "What is a chosen-ciphertext attack (CCA)?",
+        "answer": "A chosen-ciphertext attack (CCA) is an attack model where the attacker can obtain the plaintexts for arbitrarily chosen ciphertexts. This is a stronger attack model than CPA."
+    },
+    {
+        "question": "What is an adaptive chosen-ciphertext attack (CCA2)?",
+        "answer": "An adaptive chosen-ciphertext attack (CCA2) is a CCA where the attacker can choose ciphertexts adaptively, based on the results of previous decryptions."
+    },
+    {
+        "question": "What is a related-key attack?",
+        "answer": "A related-key attack is a cryptanalytic attack where an attacker can observe the operation of a cipher under several different keys, and the keys are known to be related in some way."
+    },
+    {
+        "question": "What is a known-plaintext attack (KPA)?",
+        "answer": "A known-plaintext attack (KPA) is an attack model where the attacker has access to both the plaintext and its corresponding ciphertext."
+    },
+    {
+        "question": "What is a ciphertext-only attack (COA)?",
+        "answer": "A ciphertext-only attack (COA) is an attack model where the attacker only has access to the ciphertext and attempts to deduce the plaintext or the key."
+    },
+    {
+        "question": "What is a brute-force attack?",
+        "answer": "A brute-force attack is a trial and error method used to decode encrypted data such as passwords or data, through exhaustive effort (trying every possible combination)."
+    },
+    {
+        "question": "How can you protect against brute-force attacks?",
+        "answer": "Protection methods include:\nStrong passwords: Using passwords that are long, complex, and random.\nAccount lockout policies: Disabling an account after a certain number of failed login attempts.\nRate limiting: Restricting the number of login attempts allowed within a specific time period.\nMulti-factor authentication: Requiring users to provide multiple forms of authentication."
+    },
+    {
+        "question": "What is a dictionary attack?",
+        "answer": "A dictionary attack is a type of brute-force attack that uses a list of common words and phrases (a dictionary) to guess passwords."
+    },
+    {
+        "question": "How can you protect against dictionary attacks?",
+        "answer": "Use strong passwords that are not in dictionaries, and employ salting and key stretching techniques."
+    },
+    {
+        "question": "What is a rainbow table?",
+        "answer": "A rainbow table is a precomputed table for reversing cryptographic hash functions. It is used to crack password hashes."
+    },
+    {
+        "question": "How can you protect against rainbow table attacks?",
+        "answer": "Salting and key stretching make rainbow tables ineffective because they produce unique hashes for each password."
+    },
+    {
+        "question": "What is a padding oracle attack?",
+        "answer": "A padding oracle attack is a type of attack that exploits vulnerabilities in the way that padding is handled in block ciphers, specifically when using Cipher Block Chaining (CBC) mode."
+    },
+    {
+        "question": "How does a padding oracle attack work?",
+        "answer": "The attacker sends modified ciphertexts to the server and observes the server's response to infer information about the plaintext. The server's response (e.g., whether the padding is valid or not) acts as the \"oracle\"."
+    },
+    {
+        "question": "What is the Diffie-Hellman key exchange?",
+        "answer": "The Diffie-Hellman key exchange is a method for two parties to securely exchange cryptographic keys over a public channel without having to transmit the keys directly."
+    },
+    {
+        "question": "What is the man-in-the-middle attack on Diffie-Hellman?",
+        "answer": "A man-in-the-middle attack on Diffie-Hellman occurs when an attacker intercepts the exchanged values and establishes separate Diffie-Hellman key exchanges with each party, effectively becoming a \"man-in-the-middle\" who can eavesdrop on or manipulate the communication."
+    },
+    {
+        "question": "How can you protect against the man-in-the-middle attack on Diffie-Hellman?",
+        "answer": "Using digital signatures or other authentication methods to verify the identity of the parties involved in the key exchange."
+    },
+    {
+        "question": "What is Kerberos?",
+        "answer": "Kerberos is a computer network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to authenticate to each other in a secure manner."
+    },
+    {
+        "question": "How does Kerberos work?",
+        "answer": "Kerberos uses a trusted third party, called a Key Distribution Center (KDC), to authenticate users and grant tickets for accessing network resources. The process involves an Authentication Server (AS) and a Ticket-Granting Server (TGS)."
+    },
+    {
+        "question": "What is a Kerberos ticket?",
+        "answer": "A Kerberos ticket is a set of electronic credentials that verify the identity of a user and grant access to a specific service."
+    },
+    {
+        "question": "What is a Kerberos ticket-granting ticket (TGT)?",
+        "answer": "A Kerberos ticket-granting ticket (TGT) is a special ticket issued by the Authentication Server that allows a user to request tickets for other services from the Ticket-Granting Server."
+    },
+    {
+        "question": "What is a cryptographic hash function?",
+        "answer": "A cryptographic hash function is a mathematical algorithm that takes an input of arbitrary size and produces a fixed-size output (a hash), designed to have specific properties that make it useful for security applications."
+    },
+    {
+        "question": "What are the properties of a cryptographic hash function?",
+        "answer": "Properties of a good cryptographic hash function:\nPreimage resistance: It should be computationally infeasible to find the original input (message) given only its hash value.\nSecond preimage resistance: It should be computationally infeasible to find a different input that produces the same hash value as a given input.\nCollision resistance: It should be computationally infeasible to find any two different inputs that produce the same hash value.\nDeterministic: The same input should always produce the same hash output.\nFast computation: It should be efficient to compute the hash value for any given input."
+    },
+    {
+        "question": "What is the Secure Hash Algorithm (SHA) family?",
+        "answer": "The Secure Hash Algorithm (SHA) is a family of cryptographic hash functions designed by the United States National Security Agency (NSA)."
+    },
+    {
+        "question": "What is SHA-256?",
+        "answer": "SHA-256 is a cryptographic hash function that produces a 256-bit hash value. It is a member of the SHA-2 family and is widely used and considered secure."
+    },
+    {
+        "question": "What is SHA-512?",
+        "answer": "SHA-512 is a cryptographic hash function that produces a 512-bit hash value. It is also a member of the SHA-2 family and offers a higher level of security than SHA-256."
+    },
+    {
+        "question": "What is the Message Digest Algorithm 5 (MD5)?",
+        "answer": "MD5 is a widely used cryptographic hash function producing a 128-bit hash value."
+    },
+    {
+        "question": "What are the weaknesses of MD5?",
+        "answer": "MD5 has been found to be vulnerable to collision attacks, meaning that it is possible to find two different inputs that produce the same hash value. Therefore, MD5 is considered cryptographically broken and should not be used for security-sensitive applications like digital signatures."
+    },
+    {
+        "question": "What is the Secure Sockets Layer (SSL)?",
+        "answer": "Secure Sockets Layer (SSL) is a cryptographic protocol that provides secure communication over a network. It was originally developed by Netscape for securing web traffic."
+    },
+    {
+        "question": "What is Transport Layer Security (TLS)?",
+        "answer": "Transport Layer Security (TLS) is a cryptographic protocol that provides end-to-end security of data transmitted between applications over a network. It is the successor to SSL."
+    },
+    {
+        "question": "What are the differences between SSL and TLS?",
+        "answer": "TLS is the newer and more secure version of the protocol. While SSL is still sometimes used in terminology, the underlying protocol in modern systems is almost always TLS."
+    },
+    {
+        "question": "How does TLS work?",
+        "answer": "TLS works by using a handshake process to authenticate the server (and optionally the client), negotiate a cipher suite (which includes the encryption algorithm and key exchange method), and then use that cipher suite to encrypt the data transmitted during the session."
+    }
+]

@@ -1,0 +1,402 @@
+[
+    {
+        "question": "What is cybersecurity?",
+        "answer": "Cybersecurity encompasses the technologies, processes, and practices designed to protect computer systems, networks, devices, and data from unauthorized access, damage, or attacks. It involves safeguarding information and infrastructure from cyber threats."
+    },
+    {
+        "question": "What are the primary goals of cybersecurity?",
+        "answer": "The primary goals are to protect the Confidentiality, Integrity, and Availability (CIA) of information and systems."
+    },
+    {
+        "question": "Explain the CIA triad (Confidentiality, Integrity, Availability).",
+        "answer": "Confidentiality: Ensuring that sensitive information is accessible only to authorized individuals. This involves measures like encryption, access controls, and data masking.\nIntegrity: Maintaining the accuracy and consistency of data. This is achieved through techniques like hashing, digital signatures, and version control.\nAvailability: Guaranteeing that authorized users have reliable and timely access to information and systems. This includes measures to prevent denial-of-service attacks and ensure system redundancy."
+    },
+    {
+        "question": "Describe the principle of least privilege.",
+        "answer": "This principle dictates that users and systems should be granted only the minimum level of access necessary to perform their required functions. This limits the potential damage if an account is compromised."
+    },
+    {
+        "question": "What is defense in depth?",
+        "answer": "Defense in depth involves implementing multiple layers of security controls to protect assets. If one layer fails, others are in place to provide additional protection. This includes firewalls, intrusion detection systems, antivirus software, and physical security."
+    },
+    {
+        "question": "What is a threat in cybersecurity?",
+        "answer": "A threat is any potential danger that can exploit a vulnerability to harm a system or organization. Examples include malware, hackers, and natural disasters."
+    },
+    {
+        "question": "What is a vulnerability?",
+        "answer": "A vulnerability is a weakness in a system's design, implementation, or operation that can be exploited by a threat. This could be a software bug, a misconfiguration, or a lack of user training."
+    },
+    {
+        "question": "What is risk?",
+        "answer": "Risk is the potential for harm or loss when a threat exploits a vulnerability. It is often expressed as a probability of an event occurring multiplied by the potential impact."
+    },
+    {
+        "question": "How do threats, vulnerabilities, and risks relate to each other?",
+        "answer": "Risk is a function of both threats and vulnerabilities. Specifically: Risk = Threat x Vulnerability. A high threat level combined with a severe vulnerability results in a high risk."
+    },
+    {
+        "question": "What are the different types of cyberattacks?",
+        "answer": "This includes malware attacks, social engineering attacks, denial-of-service attacks, and many more, which will be detailed in the following questions."
+    },
+    {
+        "question": "What is malware?",
+        "answer": "Malware (malicious software) is any software designed to harm or exploit computer systems."
+    },
+    {
+        "question": "Describe different types of malware...",
+        "answer": "Virus: Requires a host program to spread. It modifies other programs to insert its code.\nWorm: Self-replicating malware that can spread across networks without a host.\nTrojan: Disguises itself as legitimate software to trick users into installing it.\nRansomware: Encrypts user data and demands a ransom for its release.\nSpyware: Secretly monitors user activity and collects sensitive information."
+    },
+    {
+        "question": "How does malware spread?",
+        "answer": "Common methods include: Email attachments, infected websites, USB drives and other removable media, software vulnerabilities, and drive-by downloads."
+    },
+    {
+        "question": "What is a zero-day vulnerability?",
+        "answer": "A zero-day vulnerability is a software flaw that is unknown to the software vendor or the public. This means there is no patch available to fix it."
+    },
+    {
+        "question": "What is an exploit?",
+        "answer": "An exploit is a piece of code, a tool, or a technique that takes advantage of a vulnerability to gain unauthorized access or cause harm."
+    },
+    {
+        "question": "What is a payload in a cyberattack?",
+        "answer": "The payload is the malicious part of an attack that performs the intended harmful action. This could be anything from encrypting files (ransomware) to stealing data (spyware)."
+    },
+    {
+        "question": "What is a rootkit?",
+        "answer": "A rootkit is a type of malware that is designed to hide its presence and the presence of other malicious software on a system. It allows attackers to maintain persistent access."
+    },
+    {
+        "question": "What is a botnet?",
+        "answer": "A botnet is a network of infected computers (bots) controlled by an attacker (bot herder). Botnets can be used for various malicious activities, such as DDoS attacks or sending spam."
+    },
+    {
+        "question": "What is a denial-of-service (DoS) attack?",
+        "answer": "A DoS attack aims to overwhelm a system or network with traffic, making it unavailable to legitimate users."
+    },
+    {
+        "question": "What is a distributed denial-of-service (DDoS) attack?",
+        "answer": "A DDoS attack is a DoS attack launched from multiple compromised systems (a botnet), making it harder to defend against."
+    },
+    {
+        "question": "What is a man-in-the-middle (MitM) attack?",
+        "answer": "An MitM attack involves an attacker intercepting communication between two parties without their knowledge."
+    },
+    {
+        "question": "What is a replay attack?",
+        "answer": "A replay attack involves capturing and retransmitting data to gain unauthorized access or perform malicious actions."
+    },
+    {
+        "question": "What is a spoofing attack?",
+        "answer": "Spoofing involves disguising the source of communication to deceive the recipient."
+    },
+    {
+        "question": "What is ARP spoofing?",
+        "answer": "ARP (Address Resolution Protocol) spoofing involves sending fake ARP messages on a local area network to associate the attacker's MAC address with the IP address of another host."
+    },
+    {
+        "question": "What is DNS spoofing?",
+        "answer": "DNS (Domain Name System) spoofing involves manipulating DNS records to redirect traffic to a malicious website."
+    },
+    {
+        "question": "What is IP spoofing?",
+        "answer": "IP spoofing involves using a forged IP address to hide the attacker's identity or impersonate another system."
+    },
+    {
+        "question": "What is a SQL injection attack?",
+        "answer": "SQL injection involves inserting malicious SQL code into database queries to manipulate or extract data."
+    },
+    {
+        "question": "What is Cross-Site Scripting (XSS)?",
+        "answer": "XSS involves injecting malicious scripts into websites viewed by other users."
+    },
+    {
+        "question": "What is Cross-Site Request Forgery (CSRF)?",
+        "answer": "CSRF involves tricking a user into performing unwanted actions on a web application while they are authenticated."
+    },
+    {
+        "question": "What is a directory traversal attack?",
+        "answer": "A directory traversal attack involves exploiting vulnerabilities to access restricted directories and files on a server."
+    },
+    {
+        "question": "What is a buffer overflow attack?",
+        "answer": "A buffer overflow attack involves writing beyond the allocated memory buffer, potentially overwriting adjacent memory and executing malicious code."
+    },
+    {
+        "question": "What is a race condition?",
+        "answer": "A race condition occurs when the system's intended behavior depends on the sequence or timing of other uncontrollable events. When those events do not happen in the order expected, vulnerable code can be exploited."
+    },
+    {
+        "question": "What is a side-channel attack?",
+        "answer": "Side-channel attacks exploit information leaked from a system's implementation, such as timing, power consumption, or electromagnetic radiation."
+    },
+    {
+        "question": "What is a supply chain attack?",
+        "answer": "A supply chain attack targets vulnerabilities in the software or hardware supply chain to compromise systems."
+    },
+    {
+        "question": "What is a watering hole attack?",
+        "answer": "A watering hole attack involves infecting websites that are frequently visited by a specific group of users."
+    },
+    {
+        "question": "What is a logic bomb?",
+        "answer": "A logic bomb is code designed to execute a malicious function when specific conditions are met."
+    },
+    {
+        "question": "What is a time bomb in cybersecurity?",
+        "answer": "A time bomb is a logic bomb that is triggered by a specific time or date."
+    },
+    {
+        "question": "What is a worm in cybersecurity?",
+        "answer": "See question 12."
+    },
+    {
+        "question": "What is a ransomware attack?",
+        "answer": "See question 12."
+    },
+    {
+        "question": "What is data exfiltration?",
+        "answer": "Data exfiltration is the unauthorized transfer of data from a system or network."
+    },
+    {
+        "question": "What is privilege escalation?",
+        "answer": "Privilege escalation involves gaining higher access rights than authorized."
+    },
+    {
+        "question": "What is a security policy?",
+        "answer": "A security policy is a document that outlines an organization's security rules and procedures."
+    },
+    {
+        "question": "What are the key elements of a security policy?",
+        "answer": "Scope, responsibilities, enforcement, compliance, and review procedures."
+    },
+    {
+        "question": "What is an Acceptable Use Policy (AUP)?",
+        "answer": "An AUP is a document that outlines the rules for using an organization's computer systems and networks."
+    },
+    {
+        "question": "What is security awareness training?",
+        "answer": "Security awareness training educates users about security threats and best practices to mitigate them."
+    },
+    {
+        "question": "What is risk management?",
+        "answer": "Risk management is the process of identifying, assessing, and mitigating potential risks to an organization's assets."
+    },
+    {
+        "question": "What are the steps involved in risk management?",
+        "answer": "The steps include: identification, assessment, response (mitigation, transfer, avoidance, acceptance), and monitoring."
+    },
+    {
+        "question": "What is a risk assessment?",
+        "answer": "A risk assessment is the process of evaluating potential risks and their impact on an organization."
+    },
+    {
+        "question": "What are qualitative and quantitative risk assessments?",
+        "answer": "Qualitative: Uses descriptive terms (e.g., high, medium, low) to assess risks.\nQuantitative: Uses numerical values (e.g., monetary loss, probability) to assess risks."
+    },
+    {
+        "question": "What is a vulnerability assessment?",
+        "answer": "A vulnerability assessment is the process of identifying weaknesses in a system or network."
+    },
+    {
+        "question": "What is penetration testing?",
+        "answer": "Penetration testing (pen testing) is a simulated cyberattack to identify vulnerabilities and assess security controls."
+    },
+    {
+        "question": "What are the different types of penetration testing?...",
+        "answer": "Black box: The tester has no prior knowledge of the system.\nWhite box: The tester has full knowledge of the system.\nGray box: The tester has some knowledge of the system."
+    },
+    {
+        "question": "What is the difference between vulnerability scanning and penetration testing?",
+        "answer": "Vulnerability scanning identifies potential weaknesses, while penetration testing actively exploits those weaknesses to assess their impact."
+    },
+    {
+        "question": "What is a security audit?",
+        "answer": "A security audit is a formal evaluation of an organization's security controls and compliance with standards."
+    },
+    {
+        "question": "What is compliance?",
+        "answer": "Compliance is adhering to relevant laws, regulations, standards, and internal policies."
+    },
+    {
+        "question": "What are some common cybersecurity compliance standards?...",
+        "answer": "HIPAA (healthcare), PCI DSS (payment card industry), GDPR (data privacy), NIST (frameworks)."
+    },
+    {
+        "question": "What is incident response?",
+        "answer": "Incident response is the process of handling and recovering from security incidents."
+    },
+    {
+        "question": "What are the steps in the incident response process?",
+        "answer": "Preparation, identification, containment, eradication, recovery, and lessons learned."
+    },
+    {
+        "question": "What is a security incident?",
+        "answer": "A security incident is an event that violates an organization's security policy."
+    },
+    {
+        "question": "What is a security breach?",
+        "answer": "A security breach is a successful attack that results in unauthorized access to or disclosure of data."
+    },
+    {
+        "question": "What is digital forensics?",
+        "answer": "Digital forensics is the process of investigating digital devices to uncover evidence for legal or investigative purposes."
+    },
+    {
+        "question": "What is chain of custody in digital forensics?",
+        "answer": "Chain of custody is the documentation of the handling of digital evidence to ensure its integrity and admissibility in court."
+    },
+    {
+        "question": "What is data loss prevention (DLP)?",
+        "answer": "DLP is a set of technologies and processes used to prevent sensitive data from leaving an organization's control."
+    },
+    {
+        "question": "What is data masking?",
+        "answer": "Data masking is the process of obscuring sensitive data by replacing it with realistic but fictitious data."
+    },
+    {
+        "question": "What is data encryption?",
+        "answer": "Data encryption is the process of converting data into an unreadable format to protect its confidentiality."
+    },
+    {
+        "question": "What are the different types of encryption?...",
+        "answer": "Symmetric: Uses the same key for encryption and decryption.\nAsymmetric: Uses a pair of public and private keys."
+    },
+    {
+        "question": "What is a digital signature?",
+        "answer": "A digital signature is a cryptographic technique used to verify the authenticity and integrity of a message."
+    },
+    {
+        "question": "What is a certificate authority (CA)?",
+        "answer": "A CA is a trusted entity that issues digital certificates."
+    },
+    {
+        "question": "What is a digital certificate?",
+        "answer": "A digital certificate is an electronic document that verifies the identity of an individual or organization."
+    },
+    {
+        "question": "What is hashing?",
+        "answer": "Hashing is the process of creating a fixed-size string (hash) from an input, used for data integrity."
+    },
+    {
+        "question": "What are some common hashing algorithms?...",
+        "answer": "MD5 (Message Digest 5), SHA-256 (Secure Hash Algorithm 256-bit)."
+    },
+    {
+        "question": "What is salting in cryptography?",
+        "answer": "Salting involves adding random data to a password before hashing to prevent rainbow table attacks."
+    },
+    {
+        "question": "What is key management?",
+        "answer": "Key management is the process of handling the lifecycle of cryptographic keys, including generation, distribution, storage, and destruction."
+    },
+    {
+        "question": "What is a Public Key Infrastructure (PKI)?",
+        "answer": "PKI is a system for managing public keys and digital certificates."
+    },
+    {
+        "question": "What is a security token?",
+        "answer": "A security token is a physical or virtual device used for authentication."
+    },
+    {
+        "question": "What is a hardware security module (HSM)?",
+        "answer": "An HSM is a dedicated hardware device for performing cryptographic operations."
+    },
+    {
+        "question": "What is a security information and event management (SIEM) system?",
+        "answer": "A SIEM system collects and analyzes security logs from various sources to detect and respond to security threats."
+    },
+    {
+        "question": "What is a honeypot?",
+        "answer": "A honeypot is a decoy system designed to attract and trap attackers."
+    },
+    {
+        "question": "What is a honeynet?",
+        "answer": "A honeynet is a network of honeypots."
+    },
+    {
+        "question": "What is an intrusion detection system (IDS)?",
+        "answer": "An IDS monitors network traffic for malicious activity and generates alerts."
+    },
+    {
+        "question": "What is an intrusion prevention system (IPS)?",
+        "answer": "An IPS actively blocks or prevents malicious network traffic."
+    },
+    {
+        "question": "What is the difference between an IDS and an IPS?",
+        "answer": "An IDS detects malicious activity, while an IPS detects and prevents it."
+    },
+    {
+        "question": "What is a firewall?",
+        "answer": "A firewall is a network security system that controls incoming and outgoing network traffic."
+    },
+    {
+        "question": "What are the different types of firewalls?...",
+        "answer": "Packet filtering, stateful inspection, and proxy firewalls."
+    },
+    {
+        "question": "What is a web application firewall (WAF)?",
+        "answer": "A WAF protects web applications from attacks like SQL injection and XSS."
+    },
+    {
+        "question": "What is network segmentation?",
+        "answer": "Network segmentation is the practice of dividing a network into smaller, isolated subnetworks."
+    },
+    {
+        "question": "What is a demilitarized zone (DMZ)?",
+        "answer": "A DMZ is a network segment between the internal network and the internet, used to host public-facing servers."
+    },
+    {
+        "question": "What is a virtual private network (VPN)?",
+        "answer": "A VPN creates a secure, encrypted connection over a public network."
+    },
+    {
+        "question": "What are the different VPN protocols?...",
+        "answer": "IPsec, SSL/TLS, and WireGuard."
+    },
+    {
+        "question": "What is network address translation (NAT)?",
+        "answer": "NAT translates private IP addresses to public IP addresses, allowing multiple devices to share a single public IP."
+    },
+    {
+        "question": "What is port forwarding?",
+        "answer": "Port forwarding directs network traffic to a specific device on a local network."
+    },
+    {
+        "question": "What is subnetting?",
+        "answer": "Subnetting is the process of dividing a network into smaller subnetworks."
+    },
+    {
+        "question": "What is VLAN?",
+        "answer": "A VLAN (Virtual Local Area Network) is a logical network on a physical network."
+    },
+    {
+        "question": "What is network sniffing?",
+        "answer": "Network sniffing is the process of capturing and analyzing network traffic."
+    },
+    {
+        "question": "What are some common network sniffing tools?...",
+        "answer": "Wireshark, tcpdump."
+    },
+    {
+        "question": "What is a man-in-the-browser (MitB) attack?",
+        "answer": "MitB is a type of malware that intercepts and manipulates browser activity."
+    },
+    {
+        "question": "What is clickjacking?",
+        "answer": "Clickjacking is a technique that tricks users into clicking hidden links or buttons."
+    },
+    {
+        "question": "What is session hijacking?",
+        "answer": "Session hijacking involves taking control of a user's active session."
+    },
+    {
+        "question": "What is cookie hijacking?",
+        "answer": "Cookie hijacking is a type of session hijacking that involves stealing a user's cookies."
+    },
+    {
+        "question": "What is a SYN flood attack?",
+        "answer": "A SYN flood attack is a type of denial-of-service attack that overwhelms a server with SYN requests, preventing legitimate connections."
+    }
+]
